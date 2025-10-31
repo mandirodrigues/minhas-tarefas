@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o nome do título que aparece na aba do navegador -->
+    <title>Minhas Tarefas</title>
+
+    <!-- Importa a fonte "Dancing Script" do Google Fonts para estilizar o texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Importa o arquivo externo de estilos CSS que define o visual da página -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Div principal que envolve todo o conteúdo da aplicação -->
+    <div class="container">
+
+        <!-- Título principal da página -->
+        <h1> Minhas Tarefas</h1>
+
+        <!-- Local onde o usuário pode digitar uma nova tarefa e clicar para adicionar -->
+        <div class="input-area">
+
+            <!-- Campo de texto para digitar a tarefa -->
+            <input type="text" id="novaTarefa" placeholder="Digite uma nova tarefa...">
+
+            <!-- Botão ao ser clicado, chama a função JavaScript para adicionar a nova tarefa -->
+            <button id="adicionarBtn">Adicionar</button>
+        </div>
+
+        <!-- Cada tarefa será inserida como um item <li> pelo JavaScript -->
+        <ul id="listaTarefas"></ul>
+
+        <!-- Onde mostrará o número total de tarefaas adicionadas -->
+        <p id="contador"></p>
+    </div>
+
+    <!-- Importa o arquivo JavaScript que contém a lógica da aplicação -->
+    <!-- Esse script adiciona, remove e conta as tarefas -->
+    <script src="script.js"></script>
+</body>
+
+</html>

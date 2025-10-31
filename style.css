@@ -1,0 +1,154 @@
+/* ================================================= */
+/* 1. ESTILOS GERAIS DO CORPO E BACKGROUND (FUNDO) */
+/* ================================================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5efe0;
+
+    /* Cria o efeito de papel com um gradiente */
+    background-image: repeating-linear-gradient(to bottom,
+            #f5efe0 0px,
+            #f5efe0 24px,
+            #e8dfc9 25px);
+
+    margin: 0;
+    /* Centraliza o container principal na tela */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Alinha o bloco no topo */
+    height: 100vh;
+    padding-top: 40px;
+    /* Espaço do topo da tela até o bloco */
+}
+
+/* ================================================= */
+/* 2. ESTILOS DO CONTAINER PRINCIPAL (BLOCO DE NOTAS) */
+/* ================================================= */
+.container {
+    width: 400px;
+    background: #fffefb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+    position: relative;
+    /* Borda lateral esquerda grossa */
+    border-left: 5px solid #b89f6a;
+    overflow: visible;
+}
+
+/* ================================================= */
+/* 3. ESTILOS DO TÍTULO */
+/* ================================================= */
+h1 {
+    text-align: center;
+    /* Aplica a fonte cursiva*/
+    font-family: 'Dancing Script', 'Handlee', cursive;
+    color: #6b4e16;
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* ================================================= */
+/* 4. ESTILOS DA ÁREA DE INPUT E CAMPO DE TEXTO */
+/* ================================================= */
+.input-area {
+    display: flex;
+    /* Alinha o input e o botão lado a lado */
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    /*Faz o input ocupar o máximo de espaço disponível */
+    padding: 8px;
+    border: none;
+    border-bottom: 2px dashed #b89f6a;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* ================================================= */
+/* 5. ESTILOS DO BOTÃO ADICIONAR */
+/* ================================================= */
+button {
+    background-color: #f5c36b;
+    color: #4b2e05;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* Transiçãopara o efeito hover */
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ffdb88;
+    /* Cor mais clara ao passar o mouse */
+}
+
+/* ================================================= */
+/* 6. ESTILOS DA LISTA DE TAREFAS (UL E LI) */
+/* ================================================= */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #fffdf8;
+    margin-bottom: 8px;
+    padding: 10px;
+    /* Borda de destaque para cada item de tarefa */
+    border-left: 5px solid #f5c36b;
+    /* Alinha o texto da tarefa e o botão de exclusão*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+    /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilo aplicado via JavaScript quando a tarefa é concluída */
+li.concluida {
+    text-decoration: line-through;
+    /* Riscado */
+    color: #999;
+    /* Cor cinza */
+    background-color: #f0efea;
+    border-left-color: #ccc;
+    /* Borda lateral cinza mais clara */
+}
+
+/* ================================================= */
+/* 7. ESTILOS DE ELEMENTOS INDIVIDUAIS */
+/* ================================================= */
+
+.excluir {
+    background: transparent;
+    border: none;
+    color: #b23b3b;
+    /* Cor vermelha para o 'X' */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contador {
+    text-align: right;
+    font-style: italic;
+    margin-top: 10px;
+    color: #5a4b2d;
+}
